@@ -4,28 +4,6 @@ A monorepo hub for **10,000 on-chain pixel faces** — trait-powered games, shar
 
 Live demo: [normieshub.vercel.app](https://normieshub.vercel.app/)
 
-![Normie Banner X header export](docs/screenshots/banner-x-header.png)
-
-## Screenshots
-
-Exportable PNGs from games and tools — all generated in-browser from on-chain Normie pixels.
-
-| | |
-|---|---|
-| **Normie Run** — score card with your pixel self and collected faces | **Block Builder** — poster after clearing lines |
-| ![Normie Run](docs/screenshots/normie-run-3431.png) | ![Block Builder](docs/screenshots/block-builder-2702.png) |
-| **Canvas Lab** — XOR edit preview | **Squad Sheet** — wallet holdings contact sheet |
-| ![Canvas Lab XOR](docs/screenshots/canvas-lab-42-xor.png) | ![Squad Sheet](docs/screenshots/squad-sheet.png) |
-| **Burn Memorial** — commemorative burned Normie card | **Block Builder** — another haul |
-| ![Burn Memorial](docs/screenshots/burn-memorial-1241.png) | ![Block Builder 2460](docs/screenshots/block-builder-2460.png) |
-
-<details>
-<summary>Canvas Lab — light edit (28 px changed)</summary>
-
-![Canvas Lab edit](docs/screenshots/canvas-lab-42-edit.png)
-
-</details>
-
 ## Games
 
 | Experience | Description |
@@ -94,6 +72,7 @@ apps/hub/          React + Vite frontend, Vercel serverless API helpers
 packages/shared/   Shared pixel export utilities & constants
 api/               Vercel serverless routes (listings, Normies proxy, X avatars)
 scripts/           Trait fetch/generate scripts
+docs/screenshots/  README showcase images (not served by the app)
 ```
 
 ## Deploy (Vercel)
@@ -114,6 +93,39 @@ Paths are relative to `apps/hub` — do **not** set Output Directory to `apps/hu
 Set **`OPENSEA_API_KEY`** in Vercel project settings for live OpenSea listings on `/explore`.
 
 **Live site:** [normieshub.vercel.app](https://normieshub.vercel.app/)
+
+## Screenshots
+
+Exportable PNGs and hub UI — generated in-browser from on-chain Normie pixels. Images live in [`docs/screenshots/`](docs/screenshots/).
+
+### Hub & games
+
+| | |
+|---|---|
+| **Hub** — games tab | **Normie Snake** — eat faces to grow your chain |
+| ![Hub games](docs/screenshots/hub-games.png) | ![Normie Snake](docs/screenshots/normie-snake.png) |
+| **Normie Run** — score card with your pixel self and collected faces | **Block Builder** — poster after clearing lines |
+| ![Normie Run](docs/screenshots/normie-run-3431.png) | ![Block Builder](docs/screenshots/block-builder-2702.png) |
+| **Block Builder** — another haul | |
+| ![Block Builder 2460](docs/screenshots/block-builder-2460.png) | |
+
+### Tools & explore
+
+| | |
+|---|---|
+| **Collection Grid** — browse all 10,000 Normies | **Normie Circle** — your pixel self ringed by Normies |
+| ![Collection Grid](docs/screenshots/collection-grid.png) | ![Normie Circle](docs/screenshots/normie-circle.png) |
+| **Canvas Lab** — XOR edit preview | **Squad Sheet** — wallet holdings contact sheet |
+| ![Canvas Lab XOR](docs/screenshots/canvas-lab-42-xor.png) | ![Squad Sheet](docs/screenshots/squad-sheet.png) |
+| **Burn Memorial** — commemorative burned Normie card | **Normie Banner** — X header export |
+| ![Burn Memorial](docs/screenshots/burn-memorial-1241.png) | ![Banner](docs/screenshots/banner-x-header.png) |
+
+<details>
+<summary>Canvas Lab — light edit (28 px changed)</summary>
+
+![Canvas Lab edit](docs/screenshots/canvas-lab-42-edit.png)
+
+</details>
 
 ## Hackathon
 
