@@ -76,11 +76,12 @@ scripts/           Trait fetch/generate scripts
 
 ## Deploy (Vercel)
 
-The repo is configured for Vercel via `vercel.json`:
+Import the repo at the **repository root** (leave Root Directory empty). `vercel.json` sets:
 
-```bash
-pnpm build
-```
+- **Build command:** `pnpm build`
+- **Output directory:** `apps/hub/dist`
+
+In Vercel project settings, do **not** override Output Directory to `dist` — that path is only correct for a single-package app at repo root.
 
 Set **`OPENSEA_API_KEY`** in Vercel project settings for live OpenSea listings on `/explore`.
 
