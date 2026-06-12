@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "../../../packages/shared/src/styles.css";
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  background: #e3e5e4;
+  color: #48494b;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}

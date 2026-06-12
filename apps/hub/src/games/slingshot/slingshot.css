@@ -1,0 +1,217 @@
+.slingshot-level-select .level-progress-bar {
+  position: relative;
+  height: 22px;
+  background: #f5f5f4;
+  border: 2px solid #48494b;
+  overflow: hidden;
+}
+
+.slingshot-level-select .level-progress-fill {
+  height: 100%;
+  background: #48494b;
+  opacity: 0.25;
+  transition: width 0.4s ease;
+}
+
+.slingshot-level-select .level-progress-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.slingshot-level-select .level-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+  max-height: 55vh;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.slingshot-level-select .level-cell {
+  border: 2px solid #48494b;
+  background: #f5f5f4;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.slingshot-level-select .level-cell:hover:not(.locked) {
+  transform: translateY(-3px);
+  background: white;
+}
+
+.slingshot-level-select .level-cell.locked {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.slingshot-level-select .level-cell.completed {
+  border-color: #1a1a1a;
+}
+
+.slingshot-level-select .level-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.slingshot-level-select .level-stars {
+  font-size: 11px;
+  color: #1a1a1a;
+}
+
+.slingshot-hud-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 2px solid #48494b;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.slingshot-hud-grid .hud-label {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+}
+
+.slingshot-hud-grid .hud-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.slingshot-hud-grid .hud-dots {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.slingshot-ability-hint {
+  color: #1a1a1a;
+  background: #f5f5f4;
+  border: 1px solid #48494b;
+  padding: 6px;
+}
+
+.slingshot-canvas-wrap {
+  border: 2px solid #48494b;
+  background: #e3e5e4;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 800 / 480;
+  margin: 0 auto;
+}
+
+.slingshot-canvas-wrap canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.slingshot-overlay {
+  text-align: center;
+  padding: 1.5rem;
+  border: 2px solid #48494b;
+  background: #f5f5f4;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.slingshot-squad {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.slingshot-squad-item {
+  border: 2px solid #48494b;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+}
+
+.slingshot-joystick-wrap {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  touch-action: none;
+}
+
+.slingshot-joystick-base {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #48494b;
+  background: #f5f5f4;
+  position: relative;
+  touch-action: none;
+}
+
+.slingshot-joystick-knob {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #48494b;
+  background: #e3e5e4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: box-shadow 0.15s;
+}
+
+.slingshot-joystick-knob.active {
+  box-shadow: 0 0 0 3px rgba(72, 73, 75, 0.3);
+  background: white;
+}
+
+.slingshot-joystick-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #48494b;
+}
+
+@media (max-width: 640px) {
+  .slingshot-hud-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .slingshot-hud-grid .hud-value {
+    font-size: 12px;
+  }
+
+  .slingshot-canvas-wrap {
+    max-width: none;
+    border-left: none;
+    border-right: none;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+  }
+
+  .slingshot-joystick-wrap {
+    display: flex;
+  }
+}

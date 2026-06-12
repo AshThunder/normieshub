@@ -1,0 +1,162 @@
+.snake-wrap {
+  border: 2px solid #48494b;
+  background: #f5f5f4;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.snake-wrap canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.snake-hud {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.snake-hud-stat {
+  border: 1px solid #48494b;
+  padding: 6px 8px;
+  background: #f5f5f4;
+  text-align: center;
+}
+
+.snake-hud-stat span {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.snake-hud-stat strong {
+  font-size: 16px;
+}
+
+.snake-difficulty-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.snake-difficulty-btns .active {
+  background: #48494b;
+  color: #e3e5e4;
+}
+
+.snake-controls-wrap {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 8px 0;
+  touch-action: none;
+}
+
+.snake-dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.snake-dpad-center {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.snake-control-btn {
+  height: 64px;
+  border: 2px solid #48494b;
+  background: #f5f5f4;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: #48494b;
+  touch-action: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.snake-control-btn:active {
+  background: #48494b;
+  color: #e3e5e4;
+}
+
+.snake-control-up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.snake-control-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.snake-control-right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.snake-control-down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.snake-retry-btn {
+  width: 100%;
+  height: 48px;
+  border: 2px solid #48494b;
+  background: #48494b;
+  color: #e3e5e4;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  touch-action: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .snake-hud {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+  }
+
+  .snake-hud-stat strong {
+    font-size: 14px;
+  }
+
+  .snake-wrap {
+    max-width: none;
+    border-left: none;
+    border-right: none;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    width: calc(100% + 1.5rem);
+  }
+
+  .snake-controls-wrap {
+    display: flex;
+    max-width: none;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .snake-dpad {
+    max-width: 280px;
+  }
+}

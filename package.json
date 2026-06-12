@@ -1,0 +1,17 @@
+{
+  "name": "normie-hub",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @normie/hub dev",
+    "build": "pnpm --filter @normie/shared build && pnpm --filter @normie/hub build",
+    "fetch-traits": "tsx scripts/fetch-traits.ts",
+    "generate-traits": "tsx scripts/generate-fallback-traits.ts",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@vercel/node": "^5.1.14",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@10.29.2"
+}
