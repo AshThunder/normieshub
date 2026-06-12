@@ -1,4 +1,4 @@
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { drawPixelGrid } from "./render";
 
 export interface PixelPngOptions {
@@ -44,7 +44,7 @@ export async function exportPixelPng({
     ctx.font = `${Math.round(size * 0.025)}px monospace`;
     ctx.fillStyle = "rgba(72, 73, 75, 0.5)";
     ctx.textAlign = "center";
-    ctx.fillText("normies.art", size / 2, size - pad * 0.15);
+    ctx.fillText(HUB_HOST, size / 2, size - pad * 0.15);
   }
 
   return new Promise((resolve, reject) => {

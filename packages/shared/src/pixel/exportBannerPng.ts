@@ -1,5 +1,5 @@
 import { getPixels, getTraits } from "../api/normies";
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import {
   BANNER_FORMATS,
   layoutCollectorSlots,
@@ -97,7 +97,7 @@ function drawWatermark(ctx: CanvasRenderingContext2D, w: number, h: number): voi
   ctx.fillStyle = "rgba(72, 73, 75, 0.55)";
   ctx.textAlign = "right";
   ctx.textBaseline = "bottom";
-  ctx.fillText("normies.art", w - w * 0.03, h - h * 0.04);
+  ctx.fillText(HUB_HOST, w - w * 0.03, h - h * 0.04);
 }
 
 async function drawParade(

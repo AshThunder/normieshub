@@ -8,7 +8,7 @@ export function loadAudioSettings(): AudioSettings {
     if (!raw) return { ...DEFAULT_AUDIO_SETTINGS };
     const parsed = JSON.parse(raw) as Partial<AudioSettings>;
     return {
-      musicEnabled: parsed.musicEnabled ?? DEFAULT_AUDIO_SETTINGS.musicEnabled,
+      musicEnabled: false,
       sfxEnabled: parsed.sfxEnabled ?? DEFAULT_AUDIO_SETTINGS.sfxEnabled,
       musicVolume: clamp01(parsed.musicVolume ?? DEFAULT_AUDIO_SETTINGS.musicVolume),
       sfxVolume: clamp01(parsed.sfxVolume ?? DEFAULT_AUDIO_SETTINGS.sfxVolume),

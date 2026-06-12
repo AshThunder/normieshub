@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { HUB_HOST, HUB_URL } from "@normie/shared";
 import { audioManager } from "../audio/audioManager";
 import { NormieVisualizer, type VisualizerMode } from "./NormieVisualizer";
 import { PLAYLIST_TRACKS } from "./tracks";
@@ -248,8 +249,8 @@ export function PlaylistPage() {
           api.normies.art
         </a>
         {" · "}
-        <a href="https://normies.art" target="_blank" rel="noreferrer" className="underline">
-          normies.art
+        <a href={HUB_URL} target="_blank" rel="noreferrer" className="underline">
+          {HUB_HOST}
         </a>
       </p>
     </div>

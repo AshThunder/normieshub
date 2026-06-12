@@ -1,4 +1,4 @@
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { drawPixelGrid } from "./render";
 
 export interface CanvasLabPngOptions {
@@ -60,7 +60,7 @@ export async function exportCanvasLabPng({
   ctx.fillStyle = "rgba(72, 73, 75, 0.6)";
   ctx.font = `${Math.floor(size * 0.022)}px monospace`;
   ctx.textAlign = "center";
-  ctx.fillText("Canvas Lab preview · normies.art", width / 2, height - pad * 0.6);
+  ctx.fillText(`Canvas Lab preview · ${HUB_HOST}`, width / 2, height - pad * 0.6);
 
   return new Promise((resolve, reject) => {
     canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error("Export failed"))), "image/png");

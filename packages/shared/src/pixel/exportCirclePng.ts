@@ -1,5 +1,5 @@
 import { normieImageUrl } from "../api/normies";
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { CIRCLE_RINGS, layoutCircleSlots } from "./circleLayout";
 import { drawPixelGrid } from "./render";
 
@@ -98,7 +98,7 @@ export async function drawCircleArt(
   ctx.fillStyle = "rgba(72, 73, 75, 0.6)";
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
-  ctx.fillText("normies.art", cx, size - size * 0.018);
+  ctx.fillText(HUB_HOST, cx, size - size * 0.018);
 }
 
 export async function exportCirclePng(options: CirclePngOptions): Promise<Blob> {

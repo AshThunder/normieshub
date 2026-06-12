@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   downloadBlob,
   exportBlockBuilderPng,
+  HUB_URL,
   PixelImage,
 } from "@normie/shared";
 import type { BlockBuilderResult } from "./engine/types";
@@ -33,7 +34,7 @@ export function EndScreen({ result, onRestart }: EndScreenProps) {
   };
 
   const shareText = encodeURIComponent(
-    `I cleared ${result.linesCleared} lines and collected ${result.collectedNormieIds.length} Normies in Block Builder! Score: ${result.score}`,
+    `I cleared ${result.linesCleared} lines and collected ${result.collectedNormieIds.length} Normies in Block Builder! Score: ${result.score} · ${HUB_URL}`,
   );
 
   return (

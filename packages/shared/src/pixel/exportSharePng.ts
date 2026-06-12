@@ -1,5 +1,5 @@
 import { normieImageUrl } from "../api/normies";
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { drawPixelGrid } from "./render";
 
 export interface SharePngOptions {
@@ -68,7 +68,7 @@ export async function exportSharePng(options: SharePngOptions): Promise<Blob> {
   ctx.fillText(`SCORE: ${score}`, W / 2, H - 80);
   ctx.font = "14px monospace";
   ctx.fillStyle = "#888";
-  ctx.fillText("normies.art", W / 2, H - 40);
+  ctx.fillText(HUB_HOST, W / 2, H - 40);
 
   return new Promise((resolve, reject) => {
     canvas.toBlob((blob) => {

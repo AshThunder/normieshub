@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { HUB_HOST, HUB_URL } from "@normie/shared";
 import { SoundControls } from "./SoundControls";
 
 const NAV = [
@@ -95,8 +96,8 @@ export function HubShell({ children }: { children: React.ReactNode }) {
           api.normies.art
         </a>
         {" · "}
-        <a href="https://hackathon.normies.art" className="underline" target="_blank" rel="noreferrer">
-          Hackathon
+        <a href={HUB_URL} className="underline" target="_blank" rel="noreferrer">
+          {HUB_HOST}
         </a>
       </footer>
     </div>

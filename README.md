@@ -2,7 +2,29 @@
 
 A monorepo hub for **10,000 on-chain pixel faces** — trait-powered games, sharable art tools, collection explore, and canvas practice. Built on the [Normies API](https://api.normies.art).
 
-Live demo: [hackathon.normies.art](https://hackathon.normies.art/)
+Live demo: [normieshub.vercel.app](https://normieshub.vercel.app/)
+
+![Normie Banner X header export](docs/screenshots/banner-x-header.png)
+
+## Screenshots
+
+Exportable PNGs from games and tools — all generated in-browser from on-chain Normie pixels.
+
+| | |
+|---|---|
+| **Normie Run** — score card with your pixel self and collected faces | **Block Builder** — poster after clearing lines |
+| ![Normie Run](docs/screenshots/normie-run-3431.png) | ![Block Builder](docs/screenshots/block-builder-2702.png) |
+| **Canvas Lab** — XOR edit preview | **Squad Sheet** — wallet holdings contact sheet |
+| ![Canvas Lab XOR](docs/screenshots/canvas-lab-42-xor.png) | ![Squad Sheet](docs/screenshots/squad-sheet.png) |
+| **Burn Memorial** — commemorative burned Normie card | **Block Builder** — another haul |
+| ![Burn Memorial](docs/screenshots/burn-memorial-1241.png) | ![Block Builder 2460](docs/screenshots/block-builder-2460.png) |
+
+<details>
+<summary>Canvas Lab — light edit (28 px changed)</summary>
+
+![Canvas Lab edit](docs/screenshots/canvas-lab-42-edit.png)
+
+</details>
 
 ## Games
 
@@ -90,6 +112,8 @@ Paths are relative to `apps/hub` — do **not** set Output Directory to `apps/hu
 `apps/hub/vercel.json` mirrors these settings. API routes live in `apps/hub/api/`.
 
 Set **`OPENSEA_API_KEY`** in Vercel project settings for live OpenSea listings on `/explore`.
+
+**Live site:** [normieshub.vercel.app](https://normieshub.vercel.app/)
 
 ## Hackathon
 

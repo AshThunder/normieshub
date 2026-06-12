@@ -1,5 +1,5 @@
 import { burnedNormiePngUrl } from "../api/normies";
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { drawPixelGrid, loadImageDataFromUrl, photoToNormiePixels, placeholderPixelString } from "./render";
 
 export const MEMORIAL_CARD_W = 480;
@@ -100,7 +100,7 @@ export async function drawBurnMemorialArt(
 
   ctx.font = `${Math.floor(width * 0.025)}px monospace`;
   ctx.fillStyle = PIXEL_ON;
-  ctx.fillText("normies.art", width / 2, height * 0.92);
+  ctx.fillText(HUB_HOST, width / 2, height * 0.92);
 }
 
 export async function exportBurnMemorialPng(options: BurnMemorialPngOptions): Promise<Blob> {

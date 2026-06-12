@@ -7,24 +7,19 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { useLocation } from "react-router-dom";
 import { audioManager } from "./audioManager";
-import { musicTrackForPath } from "./music";
 import type { AudioSettings } from "./types";
 
 interface AudioContextValue {
   settings: AudioSettings;
   unlock: () => void;
-  setMusicEnabled: (v: boolean) => void;
   setSfxEnabled: (v: boolean) => void;
-  setMusicVolume: (v: number) => void;
   setSfxVolume: (v: number) => void;
 }
 
 const AudioContext = createContext<AudioContextValue | null>(null);
 
 export function AudioProvider({ children }: { children: ReactNode }) {
-  const { pathname } = useLocation();
   const [settings, setSettings] = useState<AudioSettings>(() => audioManager.getSettings());
 
   useEffect(() => {
@@ -33,10 +28,6 @@ export function AudioProvider({ children }: { children: ReactNode }) {
       unsub();
     };
   }, []);
-
-  useEffect(() => {
-    audioManager.setMusicTrack(musicTrackForPath(pathname));
-  }, [pathname]);
 
   useEffect(() => {
     const unlock = () => audioManager.unlock();
@@ -52,9 +43,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     () => ({
       settings,
       unlock: () => audioManager.unlock(),
-      setMusicEnabled: (v) => audioManager.setMusicEnabled(v),
       setSfxEnabled: (v) => audioManager.setSfxEnabled(v),
-      setMusicVolume: (v) => audioManager.setMusicVolume(v),
       setSfxVolume: (v) => audioManager.setSfxVolume(v),
     }),
     [settings],

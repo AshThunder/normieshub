@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   downloadBlob,
   exportPixelPng,
+  HUB_URL,
   loadImageDataFromFile,
   loadImageDataFromUrl,
   loadXProfilePixels,
@@ -96,7 +97,7 @@ export function ConvertPage() {
     }
   };
 
-  const shareText = encodeURIComponent("I turned my photo into a Normie pixel face. normies.art");
+  const shareText = encodeURIComponent(`I turned my photo into a Normie pixel face. ${HUB_URL}`);
 
   return (
     <div className="space-y-6 max-w-2xl mx-auto">

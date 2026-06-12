@@ -1,6 +1,6 @@
 # Normies Playlist — Suno Song Briefs
 
-Ten tracks for the upcoming **Normies Playlist** hub experience. Each song is rooted in **official Normies lore** — not hub games — drawn from [api.normies.art](https://api.normies.art), [hackathon.normies.art](https://hackathon.normies.art), and the on-chain collection by **Serc & Yigit**.
+Ten tracks for the **Normies Playlist** hub experience at [normieshub.vercel.app](https://normieshub.vercel.app/). Each song is rooted in **official Normies lore** — not hub games — drawn from [api.normies.art](https://api.normies.art), the live hub, and the on-chain collection by **Serc & Yigit**.
 
 **Official pillars to reference**
 - 10,000 on-chain generative faces (token IDs `0`–`9999`)
@@ -574,6 +574,7 @@ Ten thousand faces… lit
 
 ## Sources (for accuracy)
 
+- [Normies Hub](https://normieshub.vercel.app/) — live games, tools, and playlist
 - [Normies API](https://api.normies.art/) — endpoints, colors, traits, canvas, history, agents
 - [Hackathon](https://hackathon.normies.art/) — *"Build With 10,000 On-Chain Faces"*
 - [Legacy generator](https://legacy.normies.art/) — *"Prove You're a Normie"*, Serc & Yigit credit
@@ -583,4 +584,4 @@ Ten thousand faces… lit
 
 ## Next step
 
-When your 10 Suno exports are ready, share the files (or paths) and we'll build the **Normies Playlist** in the hub — player, track order, cover art, and links to normies.art.
+When your 10 Suno exports are ready, share the files (or paths) and we'll build the **Normies Playlist** in the hub — player, track order, cover art, and links to [normieshub.vercel.app](https://normieshub.vercel.app/).

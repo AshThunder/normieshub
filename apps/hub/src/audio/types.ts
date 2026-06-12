@@ -41,7 +41,7 @@ export interface AudioSettings {
 }
 
 export const DEFAULT_AUDIO_SETTINGS: AudioSettings = {
-  musicEnabled: true,
+  musicEnabled: false,
   sfxEnabled: true,
   musicVolume: 0.45,
   sfxVolume: 0.7,

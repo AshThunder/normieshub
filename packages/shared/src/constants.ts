@@ -1,4 +1,7 @@
 /** Same-origin proxy in the hub app avoids Vercel bot challenges on cross-origin browser requests. */
+export const HUB_URL = "https://normieshub.vercel.app";
+export const HUB_HOST = "normieshub.vercel.app";
+
 export const API_BASE =
   typeof import.meta !== "undefined" &&
   "env" in import.meta &&

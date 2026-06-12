@@ -15,7 +15,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const upstream = await fetch(url, {
       headers: {
         Accept: req.headers.accept ?? "*/*",
-        "User-Agent": "NormieHub/1.0 (+https://hackathon.normies.art)",
+        "User-Agent": "NormieHub/1.0 (+https://normieshub.vercel.app)",
       },
     });
 

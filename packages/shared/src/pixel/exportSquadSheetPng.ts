@@ -1,5 +1,5 @@
 import { getPixels } from "../api/normies";
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { drawPixelGrid, placeholderPixelString } from "./render";
 
 export interface SquadSheetPngOptions {
@@ -122,7 +122,7 @@ export async function drawSquadSheetArt(
   if (showWallet && walletAddress) {
     ctx.fillText(walletAddress, width / 2, footerY);
   }
-  ctx.fillText("normies.art · On-chain generative faces", width / 2, footerY + (showWallet ? 24 : 0));
+  ctx.fillText(`${HUB_HOST} · On-chain generative faces`, width / 2, footerY + (showWallet ? 24 : 0));
 }
 
 export async function exportSquadSheetPng(options: SquadSheetPngOptions): Promise<Blob> {

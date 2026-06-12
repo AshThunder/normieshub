@@ -1,6 +1,6 @@
 import { getPixels } from "../api/normies";
 import type { NormieMetadata } from "../api/types";
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { drawPixelGrid, placeholderPixelString } from "./render";
 
 export interface IdCardPngOptions {
@@ -181,7 +181,7 @@ async function drawNormieCard(
   ctx.fillStyle = "rgba(72, 73, 75, 0.55)";
   ctx.font = `${Math.floor(11 * scale)}px monospace`;
   ctx.textAlign = "center";
-  ctx.fillText("FULLY ON-CHAIN · normies.art", width / 2, height - pad * 0.9);
+  ctx.fillText(`FULLY ON-CHAIN · ${HUB_HOST}`, width / 2, height - pad * 0.9);
 }
 
 async function drawPersonalCard(
@@ -235,7 +235,7 @@ async function drawPersonalCard(
 
   ctx.fillStyle = "rgba(72, 73, 75, 0.55)";
   ctx.font = `${Math.floor(11 * scale)}px monospace`;
-  ctx.fillText("normies.art", width / 2, height - pad * 0.9);
+  ctx.fillText(HUB_HOST, width / 2, height - pad * 0.9);
 }
 
 export async function drawIdCardArt(

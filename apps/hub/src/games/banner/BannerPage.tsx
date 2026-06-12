@@ -5,6 +5,7 @@ import {
   exportBannerPng,
   etherscanAddressUrl,
   getHolderTokens,
+  HUB_URL,
   isEthAddress,
   loadImageDataFromFile,
   loadXProfilePixels,
@@ -142,7 +143,7 @@ export function BannerPage() {
   };
 
   const shareText = encodeURIComponent(
-    `My Normie Banner — ${title || "pixel squad"} on normies.art`,
+    `My Normie Banner — ${title || "pixel squad"} · ${HUB_URL}`,
   );
 
   const ready = normieIds.length > 0;

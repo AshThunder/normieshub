@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   downloadBlob,
   exportCirclePng,
+  HUB_URL,
   loadImageDataFromFile,
   loadXProfilePixels,
   normalizeXHandle,
@@ -82,7 +83,7 @@ export function CirclePage() {
   };
 
   const shareText = encodeURIComponent(
-    `My Normie Circle — pixel me surrounded by ${CIRCLE_NORMIE_COUNT} on-chain Normies. normies.art`,
+    `My Normie Circle — pixel me surrounded by ${CIRCLE_NORMIE_COUNT} on-chain Normies. ${HUB_URL}`,
   );
 
   return (

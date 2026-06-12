@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {
   downloadBlob,
   exportSharePng,
+  HUB_URL,
   loadImageDataFromFile,
   loadImageDataFromUrl,
   loadXProfilePixels,
@@ -82,7 +83,7 @@ export function EndScreen({ score, collectedIds, xHandle = "", onRestart }: EndS
   };
 
   const shareText = encodeURIComponent(
-    `I scored ${score} in Normie Run and collected ${collectedIds.length} Normies! normies.art`,
+    `I scored ${score} in Normie Run and collected ${collectedIds.length} Normies! ${HUB_URL}`,
   );
 
   return (

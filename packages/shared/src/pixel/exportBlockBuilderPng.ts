@@ -1,5 +1,5 @@
 import { getPixels } from "../api/normies";
-import { PIXEL_OFF, PIXEL_ON } from "../constants";
+import { HUB_HOST, PIXEL_OFF, PIXEL_ON } from "../constants";
 import { drawPixelGrid, placeholderPixelString } from "./render";
 
 export interface BlockBuilderPngOptions {
@@ -132,7 +132,7 @@ export async function drawBlockBuilderPosterArt(
     month: "short",
     day: "numeric",
   });
-  ctx.fillText(`normies.art · ${date}`, width / 2, height - 24);
+  ctx.fillText(`${HUB_HOST} · ${date}`, width / 2, height - 24);
 }
 
 export async function exportBlockBuilderPng(options: BlockBuilderPngOptions): Promise<Blob> {
