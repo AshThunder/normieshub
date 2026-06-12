@@ -18,4 +18,8 @@ export default defineConfig({
   server: {
     port: 5173,
   },
+  build: {
+    outDir: path.resolve(__dirname, "../../dist"),
+    emptyOutDir: true,
+  },
 });

@@ -79,9 +79,7 @@ scripts/           Trait fetch/generate scripts
 Import the repo at the **repository root** (leave Root Directory empty). `vercel.json` sets:
 
 - **Build command:** `pnpm build`
-- **Output directory:** `apps/hub/dist`
-
-In Vercel project settings, do **not** override Output Directory to `dist` — that path is only correct for a single-package app at repo root.
+- **Output directory:** `dist` (at repo root — Vite writes here from `apps/hub`)
 
 Set **`OPENSEA_API_KEY`** in Vercel project settings for live OpenSea listings on `/explore`.
 
