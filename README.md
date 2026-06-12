@@ -76,10 +76,18 @@ scripts/           Trait fetch/generate scripts
 
 ## Deploy (Vercel)
 
-Import the repo at the **repository root** (leave Root Directory empty). `vercel.json` sets:
+Set **Root Directory** to `apps/hub` and enable **Include files outside the root directory**.
 
-- **Build command:** `pnpm build`
-- **Output directory:** `dist` (at repo root — Vite writes here from `apps/hub`)
+| Setting | Value |
+|---------|--------|
+| Root Directory | `apps/hub` |
+| Output Directory | `dist` |
+| Build Command | `cd ../.. && pnpm build` |
+| Install Command | `cd ../.. && pnpm install` |
+
+Paths are relative to `apps/hub` — do **not** set Output Directory to `apps/hub/dist`.
+
+`apps/hub/vercel.json` mirrors these settings. API routes live in `apps/hub/api/`.
 
 Set **`OPENSEA_API_KEY`** in Vercel project settings for live OpenSea listings on `/explore`.
 
