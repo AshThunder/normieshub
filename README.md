@@ -1,8 +1,8 @@
+![Normies Hub — trait-powered games, tools, and collection explore](docs/screenshots/hub-banner.png)
+
 # Normies Hub
 
-A monorepo hub for **10,000 on-chain pixel faces** — trait-powered games, sharable art tools, collection explore, and canvas practice. Built on the [Normies API](https://api.normies.art).
-
-Live demo: [normieshub.vercel.app](https://normieshub.vercel.app/)
+Live demo: [normieshub.vercel.app](https://normieshub.vercel.app/) · Built on the [Normies API](https://api.normies.art)
 
 ## Games
 
